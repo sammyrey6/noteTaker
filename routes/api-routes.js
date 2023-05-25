@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { readAndAppend, readFromFile } = require('../Develop/helpers/fsUtils');
-const uuid = require('../Develop/helpers/uuid');
+const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const uuid = require('../helpers/uuid');
 
 router.get('/notes', (req, res) =>
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
